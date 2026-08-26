@@ -1,7 +1,7 @@
 import LeftSidebar from "../../components/Sidebar/LeftSidebar.jsx";
 import RightSidebar from "../../components/Sidebar/RightSidebar.jsx";
 
-function MainLayout({children}, {pageName})
+function MainLayout({children})
 {
     return (
         <>
@@ -12,7 +12,7 @@ function MainLayout({children}, {pageName})
             className="text-5xl font-bold text-black tracking-wide"
             style={{ fontFamily: "'Playfair Display', 'Georgia', cursive, serif" }}
             >
-            ({pageName})
+            {/* ({pageName}) */}
             </h1>
             </header>
 

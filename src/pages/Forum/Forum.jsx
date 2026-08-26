@@ -52,6 +52,9 @@ function Forum() {
     navigate("/login");
   };
 
+
+  
+
   return (
         <>
           
@@ -65,30 +68,25 @@ function Forum() {
             </div>
           ) : (
             <div className="flex-1 flex flex-col divide-y divide-gray-800">
+              
+              <ul>
+              {setPosts.map(posts=>
+              <li>
               <div className="p-6 hover:bg-black/5 transition cursor-pointer flex flex-col justify-center min-h-32.5">
-                <h3 className="font-semibold text-lg text-gray-900">Chủ đề thảo luận 1</h3>
-                <p className="text-sm text-gray-600 mt-1">Nội dung tóm tắt bài viết diễn đàn...</p>
+                <h3 className="font-semibold text-lg text-gray-900">(posts.title)</h3>
+                <p className="text-sm text-gray-600 mt-1">(posts.content)</p>
               </div>
-
-              <div className="p-6 hover:bg-black/5 transition cursor-pointer flex flex-col justify-center min-h-32.5">
-                <h3 className="font-semibold text-lg text-gray-900">Chủ đề thảo luận 2</h3>
-                <p className="text-sm text-gray-600 mt-1">Nội dung tóm tắt bài viết diễn đàn...</p>
-              </div>
-
-              <div className="p-6 hover:bg-black/5 transition cursor-pointer flex flex-col justify-center min-h-32.5">
-                <h3 className="font-semibold text-lg text-gray-900">Chủ đề thảo luận 3</h3>
-                <p className="text-sm text-gray-600 mt-1">Nội dung tóm tắt bài viết diễn đàn...</p>
-              </div>
-
-              <div className="p-6 hover:bg-black/5 transition cursor-pointer flex flex-col justify-center min-h-32.5">
-                <h3 className="font-semibold text-lg text-gray-900">Chủ đề thảo luận 4</h3>
-                <p className="text-sm text-gray-600 mt-1">Nội dung tóm tắt bài viết diễn đàn...</p>
-              </div>
+              </li>
+              )}
+              </ul>
             </div>
           )}
         
           </>
   );
 }
+
+
+
 
 export default Forum;
